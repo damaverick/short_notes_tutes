@@ -1,0 +1,36 @@
+﻿
+BOWER
+
+=================================================================================
+
+npm install -g bower
+bower install pkg
+bower search pkg --save (json file too)
+bower search pkg
+
+Look at versions:
+---------------------------------------------------------
+
+bower info jquery
+bower install jquery#1.1.2
+
+bower.json 
+bower install
+bower udpate
+
+{
+"name": "Tuts",
+"version": "1.0",
+"dependencies": {
+"jquery": "latest",
+"fontawesome": "latest",
+"boostrap": "latest",
+
+}
+
+}
+
+
+WOW JS
+======================================================================
+

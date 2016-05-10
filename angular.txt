@@ -1,0 +1,35 @@
+﻿4 BUIDING BLOCKS OF ANGULAR
+
+Scope dictates the behaviour of both Directive + Controller
+
+Templates
+
+Directive
+Controller
+
+Scope
+
+SET UP
+app.js
+
+angular.module(toDoListApp, []);
+body ng-app="toDoListApp"
+
+hello.js
+angular.module('toDoListApp');
+.directive('hellowWorld', function() {
+
+return {
+template: "This is bla",
+restrict: "E"
+}
+});
+
+Attach a custom directive called 'customDirective' to the module.
+angular.module('foobar')
+.directive('customDirective', function() { 
+});
+
+In the body of the directive's callback function, log this string: "This is a custom directive!".
+ return console.log("This is a custom directive!");
+

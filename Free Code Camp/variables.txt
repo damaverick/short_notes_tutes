@@ -1,0 +1,82 @@
+﻿
+VARIABLES
+
+======================================================
+
+Create an if statement inside the function to return "Yes, that was true" if the parameter wasThatTrue is true and return "No, that was false" otherwise.
+
+function trueOrFalse(wasThatTrue) {
+
+  if(wasThatTrue) {
+   return "Yes, that was true"; 
+  }
+  
+  else {
+    
+    return No, "that was false";
+  }
+  
+
+}
+
+Strict equality (===) is the counterpart to the equality operator (==). Unlike the equality operator, strict equality tests both the data type and value of the compared elements.
+
+if(val===7)
+
+
+Add the greater than operator to the indicated lines so that the return statements make sense.
+
+
+function testGreaterThan(val) {
+  if (val > 100) {  // Change this line
+    return "Over 100";
+  }
+  
+  if (val> 10) {  // Change this line
+    return "Over 10";
+  }
+
+  return "10 or Under";
+}
+
+// Change this value to test
+testGreaterThan(10);
+
+
+Combine the two if statements into one statement which will return "Yes" if val is less than or equal to 50 and greater than or equal to 25. Otherwise, will return "No".
+
+function testLogicalAnd(val) {
+  // Only change code below this line
+
+  if (val <= 50 && val >= 25) {
+  
+      return "Yes";
+
+  }
+
+  // Only change code above this line
+  return "No";
+}
+
+ELSE IF
+
+function testElse(val) {
+  var result = "";
+  // Only change code below this line
+  
+  if (val > 5) {
+    result = "Bigger than 5";
+  }
+  
+  else if (val <= 5) {
+    result = "5 or Smaller";
+  }
+  
+  // Only change code above this line
+  return result;
+}
+
+// Change this value to test
+testElse(4);
+
+

@@ -1,0 +1,4 @@
+﻿EMMET
+temp - new get_template_directory
+url - new bloginfo url
+io include_once(TEMPLATEPATH)

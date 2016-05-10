@@ -1,0 +1,100 @@
+﻿GET DATA FROM SERVER with $.get
+
+$.get(url,data,function(response) { }); 
+
+$.get("http://www.google.com", 
+firstName="Chris",
+lastName="Warr",
+function(response) {
+
+});
+
+The data param sends xtra info about data you are trying to retrieve.
+
+DISPLAY DATA FROM JSON OBJ
+
+Use $.getJSON (dental to .$get for gettng data from json fle
+ 
+$.each to loop thro array
+$.each loops thro an array and also object 2 args obj or arr + CBF
+
+$.getJSON("http://www.google.com", 
+firstName="Chris",
+lastName="Warr",
+function(response) {
+var myList = "<ul>";
+$.each(response, function(index,person) {
+if(person.something === false) {
+myList += "<li>" .person.prop . "</li>";
+}
+};
+
+});
+
+
+
+
+POSTING DATA WITH AJAX
+
+$("#form").submit(function (evt) {
+evt.preventDefault();
+var url= $(this).attr("action");
+var formData = $(this).serialize();
+$.post(url,data,function(response) { 
+$("div").html("Thanks");
+}); 
+}
+
+serialise = Creates a text string with standard URL-encoded notation of fields in an HTML form.; 
+
+
+AJAX METHOD
+
+$.ajax(url|data|obj);
+
+obj params
+success: func(response) { 
+
+ERROR HANDLNG
+
+Tac.fal to the end of ajax method. 
+fal has sngle arg anon func jqXHR
+jqXHR enhanced verson of xmlHTTPReq
+You can get the http error code	
+
+$.ajax(url|data|obj).fail (func(jqXHR) { 
+alert(jqXHR.status) 
+alert(jqXHR.statusText)
+}
+
+Ths wont wor for external requests. 
+You need to chec response n normal success callbac
+
+var url = "../data/rooms.json"; 
+
+$.getJSON("../data/rooms.json",functon(response) {
+
+var myList = "<ul>";
+
+$.each(response, function(index,person) {
+if(person.something === false) {
+myList += "<li>" .person.prop . "</li>";
+}
+
+var myList = "</ul>";
+
+}
+
+
+
+function(response) {
+var myList = "<ul>";
+$.each(response, function(index,person) {
+if(person.something === false) {
+myList += "<li>" .person.prop . "</li>";
+}
+};
+
+});
+
+

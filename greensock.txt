@@ -1,0 +1,16 @@
+GSAP PLUGINS
+
+TweenMax Lib in Codepen in Settins
+
+TweenMax.to(selector, duration(2), {
+x:500px,
+ease: Elastic.easeOut
+});
+
+Export SVG to text from Illustrator
+Add class to plygon elem with layer in ill
+
+TweenMax.to(selector, duration(2), {
+rotation:"350deg",
+ease: Elastic.easeOut
+});

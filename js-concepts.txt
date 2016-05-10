@@ -1,0 +1,32 @@
+﻿CLOSURE
+Vars within a FN are removed after FN ceases.
+This is way in which you can access a var within the scope of an object.
+When you use an anon FN the variable within this FN is not removed when FN exits and is stored within the Constructor FN.
+
+STRICT EQULAITY
+Use this if you dont want any unpredictable results with type coercion
+
+OOJ
+If you want to use an obj in multiple instances with variations use Constructor FN:
+function Constructor() { }
+
+To add properties to a CF use Constructor.prototype.newProp = foo;
+
+To create new instance/obj of CF use var newObj = new Constructor;
+
+Properties + Values within CF make use of = ; instead of "",
+
+RECURSION:
+
+var x = 0;
+
+function recursiveCall ( ) {
+    if ( x < 5 ) {
+        x += 1;
+        console.log(x);
+        recursiveCall();
+    } else {
+        return;
+    }
+}
+recursiveCall();

@@ -1,0 +1,127 @@
+GETTING STARTED WITH GIT
+
+git --version
+git init my_first_repo
+ls -a list all files hidden
+touch file 1 create file
+
+everytyhing is in .git folder
+If you git init inside folder it understands that this folder is name of repo
+remove a repo rm-r .git
+Even if all file are rm they can be restored with .git
+
+ADDING FILES
+git add file-name
+git commit will bring up a screen with info (username etc) and u can name commit
+git commit -a (add all changes to tracked files) -m is msg
+or git add to add individual files - some times you need to commit files in 2 separate commits
+git status shows u changed files etc
+
+LOOKING AT COMMITS
+
+git log
+git checkout 12345
+
+When looking at files in this state to nav bak to files which can be worked on use
+git checkout master
+git diff 12345 678910 to check changes between 2 commits +++ represents files added GUI software is better
+Checkout previous commit git checkout HEAD~1 HEAD~1 is a special commit identifier in git; it stands for the previous commit
+The most recent commit is git checkout HEAD
+
+BRANCHES
+
+Useful if you want to work with other ppl 
+Also if you need to update live site but not upload other changes
+If you are going to make lots of commits before a set of changes is ready you would create a branch
+
+git branch foo-feature
+git checkout branch_name git will checkout the latest commit (HEAD commit)
+git checkout -b branch_name to checkout and switch to this branch
+If you within a branch and then create a new branch you copy all commits from the current branch you are in
+
+MANAGING BRANCHES
+
+git branch to look at all branches
+git branch -D branch_name
+
+MERGING BRANCHES
+
+This will combine commits from both branches into 1 location
+Existing branches still exist
+Git merges conflicts automatically in most cases 
+
+git checkout master (branch)
+git merge branch_name
+
+git creates a commit for the merge as well with a num 12345 	
+
+MERGE CONFLICTS
+
+IF two lines of code are different git will place <<<<<< left brackets and >>>>>>>>>>> and indicate the 2 files
+and ===== between both branches
+
+You just need to remove lines and then adjust to whatever you would prefer
+
+You then need to add the file to staging (git add file-name) and git commit. Git will know that you are trying to merge and will have a msg with words merge.
+
+WORKING WITH REMOTES
+
+Remote is needed for backup purposes
+So there is one central authortive source
+So others can workin on repo
+
+git clone remote_path new_folder_local
+This also sets up the remote of local repo
+
+In order to set up a relation to a clone you need to:
+
+git remote add our_clone_name path_to_clone_remote
+
+PUSHING AND PULLING
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+master is default or trunk of repo
+
+
+
+
+
+
+PUSH FILES
+git push origin master

@@ -1,0 +1,2 @@
+blockquote[class=quote][cite] { color:#f00; }
+Multiple attribute selectors can be used in the same selector. This makes it possible to match against several different attributes for the same element. The following rule would apply to all blockquote elements that have a class attribute whose value is exactly “quote”, and a cite attribute (regardless of its value):

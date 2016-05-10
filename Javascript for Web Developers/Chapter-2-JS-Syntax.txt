@@ -1,0 +1,108 @@
+﻿
+====================================================================================
+
+JAVASCRIPT FOR WEB DEVELOPERS
+
+====================================================================================
+
+CHAPTER 2: JS IN HTML
+
+------------------------------------------------------------------------------------
+
+ATTRS
+defer - external scripts | download immed | exec deferred
+async - external scripts | no guarantee on order | not recommended for dom mods
+
+* use these on body of comments for enterprise apps
+
+STRICT MODE
+
+function blah() {
+"use strict"
+}
+
+Removes erratic ECMA3 behaviours
+Always include a semi-colon so u can compress JS files
+
+Keywords & Reserved Terms
+
+VARIABLES
+var key;  // var declaration
+var key = 0;  // var initialisation
+
+When creating a var with var keyword the variable is local to the FN and destroyed when FN exits.
+var minus the var keyword are global. Using this method is not recommended as it isnt clear if ommision of var keyword is deliberate or not.
+
+
+DATA TYPES
+
+============================================================================
+
+6 Types
+
+Undefined
+String
+Number
+Boolean
+Object
+Function
+
+alert (typeof message); //String
+alert (typeof (message)); //String
+
+typeof doesnt require brackets as it is an operator
+
+typeof confusion
+typeof null returns obj (null is considered an empty obj)
+typeof regExp returns either Obj or func in various browsers
+
+Technically fns are considered objcts in ECMA  but do have special props which necessitates the differentiation between an OBJ.
+
+
+UNDEFINED
+
+------------------------------------------------------------------------------
+
+Has only one val: undefined
+
+This was created to run comparisons. When a var is declared but is not initialised it has a val of undef.
+Undeclared/commented vars like 
+
+// var age 
+
+can only have typeof run on it which is generally undef
+
+var msg;
+// var age;
+
+alert typeof age; // undef
+alert typeof msg; // undef
+
+It's advised that you always initialise vars so you know for sure why a var returns a val of undef.
+
+
+
+THE NULL TYPE
+
+------------------------------------------------------------------------------
+
+Has only one val: null
+null is an empty obj.
+undefined and null are related.
+alert(null ==  undefined); // true
+
+var car = null;
+
+When defining a var that is meant to hold an obj later its advisable to define it as null. That way you can explicity test
+to see if the var has been filled with an obj.
+
+Anytime an obj is expected but isnt available null should be used in its place. This is what 
+
+eg: if(car != null)
+
+
+BOOLEAN
+
+------------------------------------------------------------------------------
+
+

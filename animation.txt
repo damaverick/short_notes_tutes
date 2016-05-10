@@ -1,0 +1,63 @@
+ALL TRANSITION PROPERTIES ON ORIG STATE
+transition-duration:1s; to main elem this applies to all properties
+transition-property: 
+https://www.w3.org/TR/css3-transitions/#animatable-properties
+Properties with no middle properties cant be used
+
+Multiple Properties
+transition-duration:a,b,c
+transition-property: a,b,c
+transition-property: color,background;
+transition-duration: .4s,.5s;
+
+Delay
+transition-delay:.5s;
+
+Transition Speed / Easing
+transition-timing-function: .5s
+ease-out
+ease-out
+ease-in-out
+Browser default is ease;
+
+SHORT HAND
+transition: .5s = transitio: all .5s;
+First time val = duration
+transition: prop val timing-fn delay
+Multiple Properties
+transition: prop val timing-fn delay, prop val timing-fn delay,
+
+TRANSFORM
+transform: property(val)
+
+transform: rotate(-180deg)
+transform: rotate(2turn)
+Items that are rotated dont impact on dom flow and other elems
+
+SKEW
+transform: skewX(10deg)
+
+SCALE:
+scale
+scaleX, scaleY
+transform: scale(2)
+scale(x,y)
+make Sure original images are larger
+
+TRANSFORM ORIGIN:
+transform-origin:100% 100% furthest point on X and Y axis bottom right
+This is useful for aniamting SVGs
+
+TRANSLATE:
+transform: translateX(150px)
+translate(100%) is the distance of elem
+
+multiple transform
+transform: scale(2) rotate(15deg)
+
+BEXIER CURVE
+rewatch
+Use a generator
+Drop value into transiton declaration
+
+
