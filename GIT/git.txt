@@ -1,0 +1,256 @@
+GETTING STARTED WITH GIT
+
+git --version
+git init name_of_my_first_repo (name is not necessary)
+ls -a list all files hidden including .git
+touch file 1 create file
+
+everything is in .git folder
+If you git init inside folder it understands that this folder is name of repo
+
+Remove a repo rm -r name_of_my_first_repo.git
+Even if all file are rm they can be restored with .git
+
+
+
+2.0 ADDING FILES
+
+git add file-name
+git commit will bring up a screen with info (username etc) and u can name commit
+git commit -a (add all changes to tracked files) -m is msg
+or git add to add individual files - some times you need to commit files in 2 separate commits
+
+Only commit when a meaningful change is made
+
+git status shows u changed files etc
+
+
+---------------------------------------------------------------
+
+
+3.0 LOOKING AT COMMITS
+
+git log
+git checkout 12345
+Dettached head state
+Dont make any changes in this state
+
+When looking at files in this state to nav bak to files which can be worked on use
+
+git checkout master
+
+git diff 12345 678910 to check changes between 2 commits +++ represents files added GUI software is better
+Checkout previous commit git checkout HEAD~1 HEAD~1 is a special commit identifier in git; it stands for the previous commit
+The most recent commit is git checkout HEAD
+
+With commits -a brings up errors
+
+
+---------------------------------------------------------------
+
+
+
+4.0 BRANCHES - Parallel Universe to Main Project
+
+Useful if you want to work with other ppl 
+Also if you need to update live site but not upload other changes
+If you are going to make lots of commits before a set of changes is ready you would create a branch
+
+git branch foo-feature
+git checkout branch_name git will checkout the latest commit (HEAD commit)
+git checkout -b branch_name to checkout and switch to this branch
+If you within a branch and then create a new branch you copy all commits from the current branch you are in
+
+------------------------------------------------------------------
+
+
+4.1 MANAGING BRANCHES
+
+View Branches git branch to look at all branches
+Delete Branch git branch -D branch_name
+
+
+-------------------------------------------------------------------
+
+
+
+5.0 MERGING BRANCHES - Combines Universes
+
+This will combine changes and commits from both branches into 1 location
+Existing branches still exist
+Git merges conflicts automatically in most cases 
+
+git checkout master (branch)
+git merge branch_name
+
+git creates a commit for the merge as well with a num 12345 	
+Git will automatically merge files for you if it sees chnages are made on separate lines
+
+---------------------------------------------------------------------
+
+
+5.1 MERGE CONFLICTS
+
+IF two lines of code are different git will place <<<<<< left brackets and >>>>>>>>>>> and indicate the 2 files
+and ===== between both branches
+
+You just need to remove lines and then adjust to whatever you would prefer
+
+You then need to add the file to staging (git add file-name) and git commit. 
+Git will know that you are trying to merge a conflict and will have a merge msg with words merge.
+
+----------------------------------------------------------------------
+
+
+6.0 WORKING WITH REMOTES
+
+If you have a central remote you need to pull or push from this if working on a cloned version
+
+Remote is needed for backup purposes
+So there is one central authorative source
+So others can workin on repo
+
+git clone http://remote_path new_folder_local optional_clone_name
+
+
+The original set of files is now called origin
+
+Type git remote to view the origin when in clone version.
+
+This however doesnt set up a relationship tween remote to clone
+
+In order to set up a relation to a clone from the original repo you need to:
+
+git remote add our_clone_name http://path_to_clone_remote
+
+This sets up remotes to talk to each other which may sometimes be needed
+
+-------------------------------------------------------------------------------------------
+
+
+6.1 PUSHING AND PULLING
+
+1. Create a branch git checkout -b branch_name and make some edits
+2. git commit -a -m "New Changes"
+3. git push origin branch_name - You need to create a branch on origin first.
+4. If you navigate back to origin and type git branch you should now be able to view the branch and commit
+
+
+Merging Conflicts between Origin Branch and Clone Branch
+
+If you work on clone you need to git pull branch_name and then merge the conflicts
+Once you have pushed to origin branch_name you just need to type git push
+
+
+PUSH FROM ORIGIN
+
+git push remote_name
+
+ADDING A REMOTE and NAMING THAT REMOTE
+
+git remote add tommy http://tommysgitstuff.com/git_basics/cool_stuff.git
+
+
+-------------------------------------------------------------------------------------------
+
+
+7.0 GITHUB
+
+There is an issue tracker to look at issues
+Pull request tab lso exists and looks similar to issue tracker cept that it has code attached to it with commits
+and also the 
+You can also watch star and fork repos. 
+Forking creates a clone in your own github repo
+
+
+
+-------------------------------------------------------------------------------------------
+
+
+8.0 WORKFLOWS - Typical Working Day
+
+Work on a branch as you dont want your chnages to end up on live version. This is called Feature Branch.
+
+
+
+8.1 GIT FLOW
+
+Some ppl use git branch for everything. This takes the drudgery out of branch management.
+
+Some ppl create a branch called integration which is a staging version of master.
+
+
+git flow init - this will bring up a set of options
+
+set up integration branch
+
+set up prefixes
+
+feature
+release 
+hotfix
+support
+
+git flow feature start feature_name
+
+This creates a branch based on integration branch with feature prefix feature/feature_name
+
+git flow finish feature_name - This also merges everything back into master
+
+
+git flow hotfix start signup_bug
+
+
+git flow hotfix finish signup_bug
+
+
+
+
+
+REMOVE INDEX LOCK MSG
+
+cd .git
+del index.lock
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+master is default or trunk of repo
+
+
+
+
+
+
+PUSH FILES
+git push origin master
